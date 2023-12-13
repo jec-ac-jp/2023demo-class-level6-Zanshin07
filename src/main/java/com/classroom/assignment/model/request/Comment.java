@@ -9,11 +9,11 @@ public class Comment {
   @Size(min = 1, max = 20, message = "20文字以内で入力してください")
   private String name;
 
-  @NotEmpty
+  @NotEmpty(message = "空要素は許可されていません")
   private String content;
 
   // ↓アノテーションを追加してください↓
-
+  @NotEmpty(message = "メールアドレスを入力してください")
   // ↑アノテーションを追加してください↑
   @Email(message = "メールアドレスの形式ではありません")
   private String mail;
